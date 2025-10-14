@@ -1,9 +1,9 @@
 # Telco Customer Churn – Machine Learning con Selección de Rasgos vía SHAP
 
-Predicción de **churn (abandono de clientes)** en una empresa de telecomunicaciones, utilizando un pipeline reproducible con: limpieza, imputación, encoding, selección de rasgos con SHAP, y evaluación de modelos de clasificación (KNN, DecisionTree, LogisticRegression).
+Predicción de **churn (abandono de clientes)** en una empresa de telecomunicaciones, utilizando un pipeline reproducible con: limpieza, imputación, encoding, selección de rasgos con SHAP, y evaluación de modelos de clasificación (KNN, DecisionTree, LogisticRegression, RandomForest, GradientBoosting).
 
-> **Resultado final (sin fuga):**  
-> **Accuracy ≈ 0.843** · **F1 (churn=Yes) ≈ 0.652** con 17 rasgos seleccionados vía SHAP.
+> **Resultado final:**  
+> **Accuracy ≈ 0.861** · **F1 ≈ 0.721** con 17 rasgos seleccionados vía SHAP.
 
 ## Objetivo del proyecto
 
@@ -28,11 +28,13 @@ Cada modelo fue evaluado con las siguientes métricas, tanto en *train* como en 
 
 ### Resultados de los modelos
 
-| Modelo | Accuracy (F1 ponderado) | F1 (Yes) | Recall (Yes) | Comentario |
-|:--------|:-----------------------:|:---------:|:--------------:|:------------|
-| **Regresión Logística** | 0.84 | 0.68 | 0.65 | Buen equilibrio entre precisión y recall. Sin sobreajuste. |
-| **K Vecinos Más Cercanos (KNN)** | 0.83 | 0.66 | 0.63 | Similar al modelo lineal, con ligera sobreajuste en train. |
-| **Árbol de Decisión** | 0.84 | 0.66 | 0.61 | Buen rendimiento, aunque algo menos estable. |
+| Modelo | Accuracy (F1 ponderado) | 
+|:--------|:-----------------------:|
+| **Regresión Logística** | 0.84 |
+| **K Vecinos Más Cercanos (KNN)** | 0.83 |
+| **Árbol de Decisión** | 0.84 |
+| **Bosques Aleatorios** | 0.85 |
+| **Gradient Boosting** | 0.86 |
 
 > Todos los modelos presentan resultados **coherentes y estables**, sin signos de fuga ni sobreajuste.  
 > Las métricas son sólidas para un problema de churn real, donde un **F1 de 0.65–0.70** es considerado competitivo.
