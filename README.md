@@ -3,7 +3,7 @@
 Predicción de **churn (abandono de clientes)** en una empresa de telecomunicaciones, utilizando un pipeline reproducible con: limpieza, imputación, encoding, selección de rasgos con SHAP, y evaluación de modelos de clasificación (KNN, DecisionTree, LogisticRegression, RandomForest, GradientBoosting).
 
 > **Resultado final:**  
-> **Accuracy ≈ 0.861** · **F1 ≈ 0.721** con 17 rasgos seleccionados vía SHAP.
+> **Accuracy ≈ 0.842** · **F1 ≈ 0.651** con 18 rasgos seleccionados vía SHAP.
 
 ## Objetivo del proyecto
 
@@ -34,7 +34,7 @@ Cada modelo fue evaluado con las siguientes métricas, tanto en *train* como en 
 | **K Vecinos Más Cercanos (KNN)** | 0.83 |
 | **Árbol de Decisión** | 0.84 |
 | **Bosques Aleatorios** | 0.85 |
-| **Gradient Boosting** | 0.86 |
+| **Gradient Boosting** | 0.85 |
 
-> Todos los modelos presentan resultados **coherentes y estables**, sin signos de fuga ni sobreajuste.  
-> Las métricas son sólidas para un problema de churn real, donde un **F1 de 0.65–0.70** es considerado competitivo.
+> Todos los modelos presentan resultados **coherentes y estables**, sin signos de fuga ni sobreajuste
+> Las métricas son aceptables para un problema de churn real, donde un **F1 de 0.65–0.70** es considerado competitivo
